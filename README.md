@@ -1,3 +1,5 @@
+# ANGELA RUVALCABA HERNANDEZ
+
 # Generador Simple de Pipeline para GitHub Actions
 
 Este proyecto contiene un script Python interactivo que te ayuda a crear un archivo de pipeline de GitHub Actions para ejecutar tests de tu proyecto.
