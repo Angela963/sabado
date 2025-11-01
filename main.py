@@ -4,7 +4,7 @@ print("\nBienvenido al generador de pipelines para GitHub Actions.\n")
 
 # Versión de Python
 language = "python"
-version = input("¿Qué versión mínima de Python quieres usar? (Ejemplo: 3.8): ") or "3.8"
+version = input("¿Qué versión mínima de Python quieres usar?") or "3.8"
 
 # TEST AUTOMATIZADOS
 usar_test = input("¿Quieres incluir tests automáticos? (S/n): ") or "s"
