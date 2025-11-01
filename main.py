@@ -90,5 +90,7 @@ jobs:
 {steps_linter}{steps_security}{steps_test}
 '''
 
-with open(workflow_file, "w", encoding="utf-8") as f:
+with open(
+    workflow_file, "w", encoding="utf-8"
+    ) as f:
     f.write(yml)
