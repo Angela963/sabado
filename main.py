@@ -22,7 +22,7 @@ linter_pkg = ''
 if usar_linter.lower() == 's':
     linter = input("¿? ") or "flake8"
     linter_pkg = linter.split()[0]
-    cmd_linter = input(f"Comando para análisis estático: ") or f"{linter} ."
+    cmd_linter = input(f"Análisis estático (Defecto: '{linter} .'): ") or f"{linter} ."
     steps_linter = f"""
     - name: Instalar herramienta de análisis estático
       run: pip install {linter_pkg}
