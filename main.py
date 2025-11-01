@@ -1,4 +1,3 @@
-import os
 from pathlib import Path
 
 print("\nBienvenido al generador de pipelines para GitHub Actions.\n")
