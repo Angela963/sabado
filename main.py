@@ -10,7 +10,7 @@ version = input("¿Qué versión mínima de Python quieres usar?") or "3.8"
 usar_test = input("¿Quieres incluir tests automáticos? (S/n): ") or "s"
 steps_test = ''
 if usar_test.lower() == 's':
-    cmd_test = input("¿Comando para ejecutar tus tests? (por defecto: 'pytest'): ") or "pytest"
+    cmd_test = input("¿Comando para ejecutar tus tests? ") or "pytest"
     steps_test = f"""
     - name: Ejecutar tests
       run: {cmd_test}"""
@@ -20,7 +20,7 @@ usar_linter = input("¿Quieres análisis de código estático? (S/n): ") or "s"
 steps_linter = ''
 linter_pkg = ''
 if usar_linter.lower() == 's':
-    linter = input("¿Qué herramienta usarás para código estático? ('flake8', 'pylint', etc. por defecto: 'flake8'): ") or "flake8"
+    linter = input("¿Qué herramienta usarás para código estático? ") or "flake8"
     linter_pkg = linter.split()[0]
     cmd_linter = input(f"Comando para análisis estático (por defecto: '{linter} .'): ") or f"{linter} ."
     steps_linter = f"""
@@ -34,9 +34,9 @@ usar_security = input("¿Quieres análisis de seguridad? (S/n): ") or "s"
 steps_security = ''
 security_pkg = ''
 if usar_security.lower() == 's':
-    security = input("¿Herramienta para análisis de seguridad ('bandit', 'safety', etc. por defecto: 'bandit'): ") or "bandit"
+    security = input("¿Herramienta para análisis de seguridad? ") or "bandit"
     security_pkg = security.split()[0]
-    cmd_security = input(f"Comando para análisis de seguridad (por defecto: '{security} .'): ") or f"{security} ."
+    cmd_security = input(f"Comando para análisis de seguridad: ") or f"{security} ."
     steps_security = f"""
     - name: Instalar herramienta de análisis de seguridad
       run: pip install {security_pkg}

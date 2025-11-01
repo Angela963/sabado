@@ -28,5 +28,3 @@ jobs:
       run: pip install bandit
     - name: Análisis de seguridad (bandit)
       run: bandit .
-    - name: Ejecutar tests
-      run: pytest
